@@ -4,41 +4,88 @@
     <meta charset="UTF-8">
     <title>LOTR: TFOTR</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-    <body>
-        <section class="intro">
-            <div class="container">
-                <h1>The Fellowship of the Ring</h1>
 
+<body>
+    <section class="intro">
+        <div class="intro_container">
+            <img src="Assets/logo2.png">
+
+        </div>
+        <img src="./Assets/the-fellowship-of-the-ring-2582132-1920x1080.png" alt="">
+    </section>
+
+    <section class="timeline">
+        <ul>
+            <li>
+                <div>
+                    <event>1934</event>
+                    And the wind was red
+                </div>
+            </li>
+
+            <li>
+                <div>
+                </div>
+            </li>
+
+            <li>
+                <div>
+                </div>
+            </li>
+
+            <!-- more list items here -->
+        </ul>
+    </section>
+    <section class="characters">
+        <div class="container_set">
+            <div class="card" style="float: left">
+                <img src="./Assets/gandalf.jpg" alt="Avatar" style="width:100%">
+                <div class="card_container">
+                    <h4><b>John </b></h4>
+                    <p>Architect </p>
+                </div>
             </div>
-            <img src="the-fellowship-of-the-ring-2582132-1920x1080.png" alt="">
-        </section>
-
-        <section class="timeline">
-            <ul>
-                <li>
-                    <div>
-                        <event>1934</event>
-                        And the wind was red
-                    </div>
-                </li>
-
-                <li>
-                    <div>
-                    </div>
-                </li>
-
-                <li>
-                    <div>
-                    </div>
-                </li>
-
-                <!-- more list items here -->
-            </ul>
-        </section>
-        <section class="characters">
-            <div>
+            <div class="card">
+                <img src="./Assets/gandalf.jpg" alt="Avatar" style="width:100%">
+                <div class="card_container">
+                    <h4><b>Bilbo Baggins</b></h4>
+                    <p>Architect & Engineer</p>
+                </div>
             </div>
-        </section>
-    </body>
+        </div>
+
+        <div class="container_set">
+            <div class="card" style="float: left">
+                <img src="./Assets/gandalf.jpg" alt="Avatar" style="width:100%">
+                <div class="card_container">
+                    <h4><b> Doe</b></h4>
+                    <p>Engineer</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./Assets/gandalf.jpg" alt="Avatar" style="width:100%">
+                <div class="card_container">
+                    <h4><b> Baggins</b></h4>
+                    <p>Architect</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="sketchfab-embed-wrapper">
+        <iframe width="640" height="480" src="https://sketchfab.com/models/5540a4de25894b19909606afe38dce97/embed" frameborder="0" allowvr allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+
+        <p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+            <a href="https://sketchfab.com/models/5540a4de25894b19909606afe38dce97?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">The One Ring (Lord of the Rings)</a> by <a href="https://sketchfab.com/pizzamacmuffin?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">MrLeighHall</a> on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+        </p>
+    </div>
+</body>
+<script>
+    $('.card').click(function() {
+        alert(this.children[1].children[0].innerText);
+    });
+</script>
 </html>

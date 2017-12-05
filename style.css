@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'ring';
+    src: url('ring.ttf');
+    src: local('ring'),
+    local('ring'),
+    url('ring.ttf') format('opentype');
+}
+
 *,
 *::before,
 *::after {
@@ -28,7 +36,8 @@ body {
     height: 100%;
     background: no-repeat center;
 }
-.container {
+
+.intro_container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -36,11 +45,20 @@ body {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 4.5rem;
+    font-family: 'ring';
+    letter-spacing: 2px;
+    text-shadow: 30 10 30px;
+    padding: 0px 4px 0px 4px;
+    text-shadow: -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 /* Timeline section
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
 .timeline {
     width: 90%;
     max-width: 1200px;
@@ -116,6 +134,78 @@ event {
 
 /*
 Character Section */
+
 .characters {
     background: #F45B69;
+    padding: 50px 10px 50px 10px;
+}
+
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    background-color: white;
+    border-radius: 5px;
+    /* 5px rounded corners */
+    width: 300px;
+    margin: 10px 10px 10px 10px;
+    
+    width 100%
+    height 100%
+    position absolute
+    transform-style preserve-3d
+    transition transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+    border-radius 6px
+    box-shadow 0 6px 16px rgba(0,0,0,0.15)
+    cursor pointer
+
+}
+
+.card img {
+    border-radius: 5px 5px 0 0;
+}
+
+/* Add some padding inside the card container */
+.card_container {
+    padding: 2px 16px;
+    color: black;
+    text-align: center
+}
+
+
+.container_set {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.card:hover .content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+}
+
+.back {
+  background: #03446A;
+  color: white;
+  transform: rotateY( 180deg );
+}
+
+
+.audio_bar {
+margin: 10px auto; width: 100%;
+}
+
+.sketchfab-embed-wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.sketchfab-embed-wrapper iframe {
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
