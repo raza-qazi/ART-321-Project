@@ -50,7 +50,8 @@
                 <div>
                     <event>Elrond’s Council</event>
                     <br/>
-                    <p>Arriving at Rivendell, Frodo meets with Gandalf who escaped Saruman’s clutches after calling a giant eagle to aid him. The group meets with Elrond, father of Arwen, and lord of the Elves. Elrond holds a council where it is decided that the Ring must be taken to Mordor to Mount Doom to get destroyed. Frodo volunteers to become the ring keeper bearing the burden of carrying the ring. It is then decided that Gandalf, Sam, Merry, Pippin, Legolas the elf, Gimli the dwarf, Boromir of Gondor, and Strider, now identified as Aragorn -heir to Isildur,  are to accompany Frodo on his journey. They form:</p><h3><strong>The Fellowship of the Ring.</strong></h3>
+                    <p>Arriving at Rivendell, Frodo meets with Gandalf who escaped Saruman’s clutches after calling a giant eagle to aid him. The group meets with Elrond, father of Arwen, and lord of the Elves. Elrond holds a council where it is decided that the Ring must be taken to Mordor to Mount Doom to get destroyed. Frodo volunteers to become the ring keeper bearing the burden of carrying the ring. It is then decided that Gandalf, Sam, Merry, Pippin, Legolas the elf, Gimli the dwarf, Boromir of Gondor, and Strider, now identified as Aragorn -heir to Isildur, are to accompany Frodo on his journey. They form:</p>
+                    <h3><strong>The Fellowship of the Ring.</strong></h3>
                 </div>
             </li>
 
@@ -107,13 +108,24 @@
     </div>
     <div class="TheOneRing">
         One Ring to rule them all, One Ring to find them,
-        <br/>
-        One Ring to bring them all, and in the darkness bind them
+        <br/> One Ring to bring them all, and in the darkness bind them
     </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/E5rhgSylpH8" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+
+    </div>
+
+
 </body>
 <script>
     $('.card').click(function() {
-        var picture= this.children[1].children[0].innerText;
+        var picture = this.children[1].children[0].innerText;
         var audio = new Audio('./sound/gandalf.wav');
         if (picture === "Gandalf The Grey") {
             var audio = new Audio('./sound/gandalf.wav');
@@ -123,5 +135,49 @@
         audio.play();
     });
 </script>
+<script>
+    // a key map of allowed keys
+    var allowedKeys = {
+        37: 'left',
+        38: 'up',
+        39: 'right',
+        40: 'down',
+        65: 'a',
+        66: 'b'
+    };
 
+    // the 'official' Konami Code sequence
+    var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+
+    // a variable to remember the 'position' the user has reached so far.
+    var konamiCodePosition = 0;
+
+    // add keydown event listener
+    document.addEventListener('keydown', function(e) {
+        // get the value of the key code from the key map
+        var key = allowedKeys[e.keyCode];
+        // get the value of the required key from the konami code
+        var requiredKey = konamiCode[konamiCodePosition];
+
+        // compare the key with the required key
+        if (key == requiredKey) {
+
+            // move to the next key in the konami code sequence
+            konamiCodePosition++;
+
+            // if the last key is reached, activate cheats
+            if (konamiCodePosition == konamiCode.length) {
+                activateCheats();
+                konamiCodePosition = 0;
+            }
+        } else {
+            konamiCodePosition = 0;
+        }
+    });
+
+    function activateCheats() {
+        modal.style.display = "block";
+    }
+</script>
+<script src="./js/popup.js"></script>
 </html>
