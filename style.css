@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'ring';
-    src: url('../ART-321-Project/ring.ttf');
-    src: local('../ART-321-Project/ring.ttf'),
+    src: url('ring.ttf');
+    src: local('ring.ttf'),
     local('../ART-321-Project/ring.ttf'),
     url('../ART-321-Project/ring.ttf') format('opentype');
 }
